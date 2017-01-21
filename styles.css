@@ -1,0 +1,251 @@
+body, html{
+  overflow-X: hidden;
+  overflow-y: hidden;
+  background: #456;
+  padding: 0;
+}
+
+form{
+  max-width: 300px;
+  background-color: rgba(200,200,200,0.5);
+  border: 5px solid rgba(255,255,255,0.25);
+  
+  /*background-color: #DDD;*/
+  /*border: 5px solid #CCC;*/
+  
+  padding: 15px;
+  
+  margin: 20px auto;
+  position: relative;
+  left: 0;
+  
+}
+
+label{
+  -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none; /* Chrome/Safari/Opera */
+      -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+         -ms-user-select: none; /* Internet Explorer/Edge */
+             user-select: none; /* Non-prefixed version, currently
+                                   not supported by any browser */
+}
+
+input{
+  margin-top: 30px;
+}
+
+.animLabel{
+  position: relative;
+  top: -22px;
+  left: 5px;
+  
+  display: block;
+  
+  color: rgba(0,0,0,0.5);
+  transition: top 0.25s;
+  
+}
+
+input:focus + label, .entered{
+  top: -45px;
+  color: rgba(0,0,0,0.75);
+}
+
+.inputGroup{
+  /*border: 1px solid purple;*/
+  max-width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.warning{
+  text-align: right;
+  margin-bottom: -30px;
+  margin-right: 10px;
+  
+  color: red;
+  font-size: 60%;
+  
+  position: relative;
+  left: -1000px;
+  z-index: 100;
+  top: 40px;
+  
+  transition: left 0.75s; 
+  visibility: hidden;
+}
+
+.warning.active{
+  left: 0;
+  visibility: visible;
+}
+
+#rememberBox{
+  text-align: center; 
+  margin-left: -15px;
+}
+
+
+#loginButton{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+}
+
+
+legend{
+  width: 90%;
+  text-align: center;
+  font-size: 300%;
+  font-variant: small-caps;
+  
+  box-shadow: 0 5px 5px #999;
+  margin-left: 10px;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  background-color: white;
+  
+  color: #456;
+
+}
+
+fieldset{
+  /*border-color: lightgray;*/
+  background: white;
+  /*border-style: solid;*/
+  border: 1px solid grey;
+}
+
+.animInput{
+  border: none;
+  border-bottom: 3px solid #ADF;
+  font-size: 120%;
+  font-family: ‘Courier New’, Courier, monospace;
+  text-indent: 5px;
+  background: white;
+}
+
+
+#remember{
+  display: none;
+}
+
+#remember + label {
+ color: #AAA;
+}
+
+#remember:checked + label {
+ color: #456;
+}
+
+#remember:active + label{
+  color: #666;
+}
+
+label{
+  font-family: 'Times New Roman', Times;
+  font-size: 110%;
+  
+}
+
+p{
+  text-align: center;
+  font-size: 75%;
+  /*display: inline;*/
+  position: relative;
+  
+  top: 50px;
+  text-align: center;
+  height: 0;
+  text-align:center;
+  color: white;
+}
+
+#loginForm{
+  transition: transform 0.75s;
+  z-index: 1000;
+
+}
+
+#loginForm.loggedIn{
+  
+  /*transform: translateX(500%)*/
+  /*transform: translateY(-200%);*/
+  
+  /*transform: scaleY(0);*/
+  /*transform: scaleX(0);*/
+
+  /*transform: rotateX(90deg) rotateZ(90deg);*/
+
+  /*transform: scaleX(0) scaleY(0);*/
+  /*transform: scaleX(0) scaleY(0) rotateZ(180deg);*/
+  
+  /*transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);*/
+  transform: rotateX(90deg) scaleY(0) rotateZ(180deg);
+  /*transform: scaleX(0) rotateY(90deg) rotateZ(180deg);*/
+  
+  /*transform: scaleX(0) scaleY(0) rotateZ(180deg) translateX(1000px);*/
+}
+
+#welcome{
+  position: relative;
+  top: -300px;
+  text-align: center;
+  width: 275px !important;
+  
+  font-family: 'Times New Roman', Times;
+  
+  opacity: 0;
+  
+  transition-delay: 0.75s;
+  transition-timing-function: ease-in;
+  transition-property: all;
+  transition-duration: 1s;
+
+  visibility: hidden;
+  
+  color: white;
+  margin: 0 auto;
+  
+}
+
+#welcome.loggedIn{
+  opacity: 1;
+  visibility: visible;
+}
+
+#welcomeEmail{
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+}
+
+
+
+.button{
+  box-shadow: 0 5px 5px #999;
+  margin-left: 10px;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  background-color: white;
+  border: none;
+  font-size: 125%;
+  
+  border: 2px solid lightgray;
+}
+
+.button:active{
+  box-shadow: 0 2px 2px #666;
+  position: relative;
+  top: 2px;
+}
+
+/*#logoutButton{
+  text-decoration: underline;
+  font-style: italic;
+  color: #456;
+}
+
+#logoutButton:hover{
+  color: #000;
+}*/

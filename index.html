@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Form animations</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <form id="loginForm" class="">
+      <fieldset>
+        <legend>login</legend>
+        
+        <div class="inputGroup">
+          <div class="warning" id="emailWarning">Invalid Email</div>
+          <input type="email" name="email" id="email" class="animInput"/> 
+          <label for="email" id="emailLabel" class="animLabel">Email</label>
+        </div>
+        
+        <div class="inputGroup">
+          <div class="warning" id="passwordWarning">Incorrect Password</div>
+          <input type="password" name="password" id="password" class="animInput"/> 
+          <label for="password" id="passwordLabel" class="animLabel">Password</label>
+        </div>
+        
+        <div id="rememberBox">
+          <input type="checkbox" name="password" id="remember" value="true"/>
+          <label for="remember" id="rememberLabel">Remember login</label>
+        </div>
+        
+        <br />  
+        
+        <input type="submit" id="loginButton" value="Log In" class="button"/>
+      </fieldset>
+      <p>The password is 'password'</p>
+    </form>
+    
+    <form id="welcome">
+        <fieldset>
+          <legend>Welcome</legend>
+          <div id="welcomeEmail"></div>
+          
+          <button id="logoutButton"class="button"> Sign Out </button>
+        </fieldset>
+    </form>
+    
+    
+    <script src="scripts.js"></script>
+  </body>
+</html>
